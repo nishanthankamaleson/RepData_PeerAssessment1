@@ -58,8 +58,8 @@ ggplot(steps_per_day, aes(totalSteps)) +
 
 ```r
 # Calculate and report the mean and median of the total number of steps taken per day
-mean_steps_per_day = mean(steps_per_day$totalSteps)
-median_steps_per_day = median(steps_per_day$totalSteps)
+mean_steps_per_day <- mean(steps_per_day$totalSteps)
+median_steps_per_day <- median(steps_per_day$totalSteps)
 ```
 The **mean** and **median** of the total number of steps taken per day are 10766.19 and 10765, respectively.
 
