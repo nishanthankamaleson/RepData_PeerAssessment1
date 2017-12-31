@@ -119,8 +119,8 @@ During the first 30 minutes of the day subjects were deeply in sleep (0 steps we
 ```{r step-4.4}
 # Calculate the total number of steps taken per day after imputation
 imputed_steps_per_day <- imputed_activity %>% 
-                          group_by(date) %>%
-                          summarise(totalSteps=sum(steps))
+                         group_by(date) %>%
+                         summarise(totalSteps=sum(steps))
 
 ggplot(imputed_steps_per_day, aes(totalSteps)) + 
     geom_histogram(bins = nclass.Sturges(imputed_steps_per_day$totalSteps)) +
