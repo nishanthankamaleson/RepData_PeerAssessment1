@@ -138,7 +138,7 @@ The new mean is ``r imputed_mean_steps_per_day`` (old mean: ``r mean_steps_per_d
 # “weekday” and “weekend”
 imputed_activity$dayType <- as.factor(if_else(imputed_activity$weekday %in% c(1,7), "weekend", "weekday"))
 
-# Draw the grid
+# Create the plot
 imputed_average_steps_per_interval <- imputed_activity %>% group_by(interval, dayType) %>% summarise(average_steps=mean(steps))
 ggplot(imputed_average_steps_per_interval, aes(interval, average_steps)) + 
     geom_line() + 
@@ -146,3 +146,9 @@ ggplot(imputed_average_steps_per_interval, aes(interval, average_steps)) +
     labs(x="Interval (5 min)", y="Average number of steps") +
     ggtitle("Average number of steps taken per every 5 minute interval")
 ```
+
+We can observe some subtle variations between the average number of steps taken in the weekend and weekdays. The three main observations are listed below:
+
+1. More movements in the morning of the weekdays than weekends.
+2. More movements in the late evenings of the weekends than weekdays.
+3. More movements throughout the day of the weekends than weekdays.

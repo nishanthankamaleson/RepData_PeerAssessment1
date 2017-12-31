@@ -172,7 +172,7 @@ The new mean is `9705.24` (old mean: `10766.19`) and the new median is `10395` (
 # “weekday” and “weekend”
 imputed_activity$dayType <- as.factor(if_else(imputed_activity$weekday %in% c(1,7), "weekend", "weekday"))
 
-# Draw the grid
+# Create the plot
 imputed_average_steps_per_interval <- imputed_activity %>% group_by(interval, dayType) %>% summarise(average_steps=mean(steps))
 ggplot(imputed_average_steps_per_interval, aes(interval, average_steps)) + 
     geom_line() + 
@@ -182,3 +182,9 @@ ggplot(imputed_average_steps_per_interval, aes(interval, average_steps)) +
 ```
 
 ![](figure/step-5.1-1.png)<!-- -->
+
+We can observe some subtle variations between the average number of steps taken in the weekend and weekdays. The three main observations are listed below:
+
+1. More movements in the morning of the weekdays than weekends.
+2. More movements in the late evenings of the weekends than weekdays.
+3. More movements throughout the day of the weekends than weekdays.
