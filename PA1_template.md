@@ -53,7 +53,7 @@ ggplot(steps_per_day, aes(totalSteps)) +
     ggtitle('The total number of steps taken per day')
 ```
 
-![](PA1_template_files/figure-html/step-2.1-1.png)<!-- -->
+![](figure/step-2.1-1.png)<!-- -->
 
 
 ```r
@@ -78,7 +78,7 @@ ggplot(avg_steps_per_interval, aes(interval, averageSteps)) +
     ggtitle("Average number of steps taken per every 5 minute interval")
 ```
 
-![](PA1_template_files/figure-html/step-3.1-1.png)<!-- -->
+![](figure/step-3.1-1.png)<!-- -->
 
 
 ```r
@@ -157,7 +157,7 @@ ggplot(imputed_steps_per_day, aes(totalSteps)) +
     ggtitle('The total number of steps taken per day (After Imputation)')
 ```
 
-![](PA1_template_files/figure-html/step-4.4-1.png)<!-- -->
+![](figure/step-4.4-1.png)<!-- -->
 
 ```r
 imputed_mean_steps_per_day <- mean(imputed_steps_per_day$totalSteps)
@@ -181,4 +181,4 @@ ggplot(imputed_average_steps_per_interval, aes(interval, average_steps)) +
     ggtitle("Average number of steps taken per every 5 minute interval")
 ```
 
-![](PA1_template_files/figure-html/step-5.1-1.png)<!-- -->
+![](figure/step-5.1-1.png)<!-- -->

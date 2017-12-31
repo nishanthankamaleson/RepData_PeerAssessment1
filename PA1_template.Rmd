@@ -22,7 +22,7 @@ library(ggplot2)
 ```
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, warning = FALSE)
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, fig.path = 'figure/')
 options(scipen = 1, digits = 2)
 
 # Set ggplot titles in the centre
